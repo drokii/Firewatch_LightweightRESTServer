@@ -16,7 +16,7 @@ import java.util.List;
 public class Client {
 
     // http://localhost:8080/RESTfulExample/json/product/get
-    public static void main(String[] args) throws IOException {
+    public void httpPost() throws IOException {
         HttpClient httpclient = HttpClients.createDefault();
         HttpPost httppost = new HttpPost("http://localhost:7000/");
 
