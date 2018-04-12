@@ -10,9 +10,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class LoRaController {
 
     @RequestMapping(method = POST, value = "/broadcast")
-    public void receiveBroadcast(@RequestParam("test") String test) {
+    public void receiveBroadcast(@RequestParam("payload_fields") String test) {
         try {
-            System.out.println(test);
+            System.out.println(test.toString());
         } catch(Exception e) {
             System.out.println("Broadcast was recieved, but something went wrong: " + e.getMessage());
         }
