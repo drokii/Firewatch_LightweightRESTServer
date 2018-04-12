@@ -10,7 +10,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 public class LoRaController {
 
-    @RequestMapping(method = POST, value = "/broadcast")
+    @RequestMapping(method = POST, value = "/broadcast", consumes = {"application/json"})
     public void receiveBroadcast(@RequestParam("app_id") String test) {
         try {
             System.out.println(test);
