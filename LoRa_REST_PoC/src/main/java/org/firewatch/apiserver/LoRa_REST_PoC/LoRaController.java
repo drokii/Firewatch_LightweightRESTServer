@@ -8,7 +8,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class LoRaController {
 
     @RequestMapping(method = POST, value = "/broadcast")
-    public void receiveBroadcast(@PathVariable String app_id, @RequestBody TestObject input) {
+    public void receiveBroadcast(@RequestParam("app_id") String app_id) {
         try {
             System.out.println(app_id);
         } catch(Exception e) {
